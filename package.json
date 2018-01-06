@@ -8,6 +8,7 @@
     "koa-body": "^2.5.0",
     "koa-morgan": "^1.0.1",
     "koa-router": "^7.3.0",
+    "lodash": "^4.17.4",
     "redis": "^2.8.0"
   },
   "devDependencies": {
