@@ -4,7 +4,9 @@
   },
   "dependencies": {
     "koa": "^2.4.1",
-    "koa-morgan": "^1.0.1"
+    "koa-body": "^2.5.0",
+    "koa-morgan": "^1.0.1",
+    "koa-router": "^7.3.0"
   },
   "devDependencies": {
     "nodemon": "^1.14.8"
