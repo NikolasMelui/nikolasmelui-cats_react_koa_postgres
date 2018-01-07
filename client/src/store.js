@@ -15,14 +15,18 @@ const learnMoreEpic = action$ =>
 		.mergeMap(action => ajax.getJSON(`/learn`).map(response => learnMoreFulfilled(response)));
 
 const initialState = new Map({
-	title: 'Cat',
-	content: 'Beautiful cat!!!',
+	title: 'Тёмка!!!',
+	content: 'Самая красивая кошка в мире! Никого нет красивее! ЛЮБЛЮНИМАГУ!!!',
+	image: 'Temka.jpg',
 });
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case 'LEARN MORE FULFILLED':
-			return state.set('title', action.payload.title).set('content', action.payload.content);
+			return state
+				.set('title', action.payload.title)
+				.set('content', action.payload.content)
+				.set('image', action.payload.image);
 		default:
 			return state;
 	}

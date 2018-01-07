@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-import CatPicture from './catImage.jpg';
 
 const style = {
 	maxWidth: 345,
@@ -14,7 +13,7 @@ class App extends Component {
 		return (
 			<Card style={style}>
 				<CardMedia>
-					<img src={CatPicture} style={style} alt="Cat" />
+					<img src={'/images/' + this.props.image} style={style} alt={this.props.title} />
 				</CardMedia>
 				<CardContent>
 					<Typography type="headline" component="h2">
@@ -23,11 +22,8 @@ class App extends Component {
 					<Typography component="p">{this.props.content}</Typography>
 				</CardContent>
 				<CardActions>
-					<Button dense color="primary">
-						Share
-					</Button>
 					<Button dense color="primary" onClick={this.props.onClickLearn}>
-						Learn More
+						Показать ещё котов!
 					</Button>
 				</CardActions>
 			</Card>
@@ -38,6 +34,7 @@ class App extends Component {
 const mapStateToProps = state => ({
 	title: state.get('title'),
 	content: state.get('content'),
+	image: state.get('image'),
 });
 
 const mapDispatchToProps = dispatch => ({
