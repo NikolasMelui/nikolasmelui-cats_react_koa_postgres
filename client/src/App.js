@@ -4,16 +4,13 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import CatPicture from './catImage.jpg';
+import store from './store';
 
 const style = {
 	maxWidth: 345,
 };
 
 class App extends Component {
-	componentDidMount() {
-		// console.log('HEEEE!!!!!!!!!');
-		fetch('/story');
-	}
 	render() {
 		return (
 			<Card style={style}>
@@ -30,7 +27,7 @@ class App extends Component {
 					<Button dense color="primary">
 						Share
 					</Button>
-					<Button dense color="primary">
+					<Button dense color="primary" onClick={this.props.onClickLearn}>
 						Learn More
 					</Button>
 				</CardActions>
@@ -44,4 +41,8 @@ const mapStateToProps = state => ({
 	content: state.get('content'),
 });
 
-export default connect(mapStateToProps)(App);
+const mapDispatchToProps = dispatch => ({
+	onClickLearn: () => dispatch({ type: 'LEARN MORE' }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
