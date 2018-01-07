@@ -4,7 +4,6 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import CatPicture from './catImage.jpg';
-import store from './store';
 
 const style = {
 	maxWidth: 345,
