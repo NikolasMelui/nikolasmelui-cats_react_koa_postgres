@@ -1,14 +1,14 @@
 {
-  "name": "workspace",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:NikolasMelui/koa-test.git",
-  "author": "NikolasMelui <slak@samaradom.ru>",
-  "license": "MIT",
-  "scripts": {
-    "start": "concurrently \"cd server && yarn start\" \"cd client && yarn start\""
-  },
-  "dependencies": {
-    "concurrently": "^3.5.1"
-  }
+	"name": "workspace",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:NikolasMelui/koa-test.git",
+	"author": "NikolasMelui <slak@samaradom.ru>",
+	"license": "MIT",
+	"scripts": {
+		"start": "concurrently \"cd server && yarn start\" \"cd client && yarn start\""
+	},
+	"dependencies": {
+		"concurrently": "^3.5.1"
+	}
 }

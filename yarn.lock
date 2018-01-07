@@ -24,10 +24,6 @@ commander@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.6.0.tgz#9df7e52fb2a0cb0fb89058ee80c3104225f37e1d"
 
-concurrent@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/concurrent/-/concurrent-0.3.2.tgz#0eaa0011a15798c56351128f22247f6e2317f50e"
-
 concurrently@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-3.5.1.tgz#ee8b60018bbe86b02df13e5249453c6ececd2521"

@@ -11,27 +11,24 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 const initialState = new Map({
-  title: 'Cat',
-  content: 'Beautiful cat!!!'
+	title: 'Cat',
+	content: 'Beautiful cat!!!',
 });
 const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-}
+	switch (action.type) {
+		default:
+			return state;
+	}
+};
 
-const store = createStore(
-  reducer,
-  initialState,
-  composeWithDevTools({ realtime: true })(),
-);
+const store = createStore(reducer, initialState, composeWithDevTools({ realtime: true })());
 
 ReactDOM.render(
-  <MuiThemeProvider>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </MuiThemeProvider>,
-  document.getElementById('root'));
+	<MuiThemeProvider>
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</MuiThemeProvider>,
+	document.getElementById('root')
+);
 registerServiceWorker();
