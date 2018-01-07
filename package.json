@@ -12,6 +12,7 @@
 		"concurrently": "^3.5.1",
 		"pg": "^7.4.1",
 		"pg-hstore": "^2.3.2",
+		"react-retina-image": "^2.0.5",
 		"sequelize": "^4.29.0"
 	}
 }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import RetinaImage from 'react-retina-image';
 
 const style = {
 	maxWidth: 345,
@@ -13,7 +14,7 @@ class App extends Component {
 		return (
 			<Card style={style}>
 				<CardMedia>
-					<img src={'/images/' + this.props.image} style={style} alt={this.props.title} />
+					<RetinaImage src={'/images/' + this.props.image} style={style} alt={this.props.title} />
 				</CardMedia>
 				<CardContent>
 					<Typography type="headline" component="h2">
