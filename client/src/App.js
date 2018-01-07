@@ -10,6 +10,10 @@ const style = {
 };
 
 class App extends Component {
+  componentDidMount() {
+    console.log("HEEEE!!!!!!!!!")
+    // fetch('https://koa-test-nikolasmelui.c9users.io/story')
+  }
   render() {
     return (
       <Card style={style}>

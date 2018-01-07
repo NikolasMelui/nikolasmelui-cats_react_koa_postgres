@@ -16,9 +16,13 @@ router.get('/', ctx => {
   ctx.body = '!!!!'
 })
 
-router.post('/story', bodyParser, async ctx => {
-  await db.setAsync('FirstKey', 'FirstValue')
-  ctx.body = { data: ctx.request.body }
+// router.post('/story', bodyParser, async ctx => {
+//   await db.setAsync('FirstKey', 'FirstValue')
+//   ctx.body = { data: ctx.request.body }
+// })
+
+router.get('/story', ctx => {
+  ctx.body = "Hello!!!"
 })
 
 server.use(logger('dev')).use(router.routes()).listen(3001)
