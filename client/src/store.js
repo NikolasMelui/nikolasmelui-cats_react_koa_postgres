@@ -5,14 +5,14 @@ import { composeWithDevTools } from 'remote-redux-devtools';
 import { ajax } from 'rxjs/observable/dom/ajax';
 import 'rxjs';
 
-const fetchUserFulfilled = payload => ({
-	type: 'FETCH_USER_FULFILLED',
+const learnMoreFulfilled = payload => ({
+	type: 'LEARN MORE FULFILLED',
 	payload,
 });
-const fetchUserEpic = action$ =>
+const learnMoreEpic = action$ =>
 	action$
-		.ofType('FETCH_USER')
-		.mergeMap(action => ajax.getJSON(`/api/users/${action.payload}`).map(response => fetchUserFulfilled(response)));
+		.ofType('LEARN MORE')
+		.mergeMap(action => ajax.getJSON(`/learn`).map(response => learnMoreFulfilled(response)));
 
 const initialState = new Map({
 	title: 'Cat',
@@ -21,13 +21,13 @@ const initialState = new Map({
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
-		case 'LEARN MORE':
-			return state.get('title') === 'Cat' ? state.set('title', 'Красавица кошка') : state.set('title', 'Cat');
+		case 'LEARN MORE FULFILLED':
+			return state.set('title', action.payload.title).set('content', action.payload.content);
 		default:
 			return state;
 	}
 };
-const epicMiddleware = createEpicMiddleware(fetchUserEpic);
+const epicMiddleware = createEpicMiddleware(learnMoreEpic);
 const enchanser = composeWithDevTools(applyMiddleware(epicMiddleware));
 const store = createStore(reducer, initialState, enchanser);
 

@@ -25,6 +25,12 @@ router.get('/story', ctx => {
 	ctx.body = 'Hello!!!';
 });
 
+router.get('/learn', ctx => {
+	ctx.body = {
+		title: 'Kitty',
+		content: 'My little kitty!!!',
+	};
+});
 server
 	.use(logger('dev'))
 	.use(router.routes())
