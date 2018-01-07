@@ -5,16 +5,21 @@ import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import RetinaImage from 'react-retina-image';
 
-const style = {
+const cardStyle = {
+	maxWidth: 345,
+	margin: '30px auto',
+};
+
+const imgStyle = {
 	maxWidth: 345,
 };
 
 class App extends Component {
 	render() {
 		return (
-			<Card style={style}>
+			<Card style={cardStyle}>
 				<CardMedia>
-					<RetinaImage src={'/images/' + this.props.image} style={style} alt={this.props.title} />
+					<RetinaImage src={'/images/' + this.props.image} style={imgStyle} alt={this.props.title} />
 				</CardMedia>
 				<CardContent>
 					<Typography type="headline" component="h2">
