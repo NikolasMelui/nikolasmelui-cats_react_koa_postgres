@@ -2,6 +2,7 @@ const Koa = require('koa');
 const logger = require('koa-morgan');
 const Router = require('koa-router');
 const bodyParser = require('koa-body')();
+const config = require('./config');
 
 const server = new Koa();
 const router = new Router();
