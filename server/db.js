@@ -1,7 +1,14 @@
 const Sequelize = require('sequelize');
 const config = require('./config');
 
-const db = new Sequelize(`postgres://${config.db.login}:${config.db.password}@localhost:5432/koatest`);
+const dbString =
+	process.env.DATABASE_URL || `postgres://${config.db.login}:${config.db.password}@localhost:5432/koatest`;
+const ssl = !!process.env.DATABASE_URL;
+const db = new Sequelize(dbString, {
+	dialectOptions: {
+		ssl,
+	},
+});
 
 const Cats = db.define('cats', {
 	title: Sequelize.STRING,

@@ -1,7 +1,6 @@
 {
-	"name": "client",
-	"version": "0.1.0",
-	"private": true,
+	"name": "carservice-client",
+	"version": "1.0.0",
 	"proxy": "http://localhost:3001",
 	"dependencies": {
 		"immutable": "^3.8.2",
@@ -18,7 +17,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "react-scripts build && mv build/* ../server/public/",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject"
 	}

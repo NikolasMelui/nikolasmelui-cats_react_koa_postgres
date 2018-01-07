@@ -5,6 +5,7 @@ const bodyParser = require('koa-body')();
 const static = require('koa-static');
 const { Cats } = require('./db');
 
+const port = process.env.PORT || 3001;
 const server = new Koa();
 const router = new Router();
 
@@ -23,4 +24,4 @@ server
 	.use(logger('dev'))
 	.use(static('public'))
 	.use(router.routes())
-	.listen(3001);
+	.listen(port);

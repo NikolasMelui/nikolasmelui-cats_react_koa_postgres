@@ -1,16 +1,19 @@
 {
-	"name": "server",
-	"version": "0.1.0",
-	"private": true,
+	"name": "catservice-server",
+	"version": "1.0.0",
 	"scripts": {
-		"start": "node_modules/.bin/nodemon server.js"
+		"start": "node_modules/.bin/nodemon server.js",
+		"start:prod": "node server.js"
 	},
 	"dependencies": {
 		"koa": "^2.4.1",
 		"koa-body": "^2.5.0",
 		"koa-morgan": "^1.0.1",
 		"koa-router": "^7.3.0",
-		"koa-static": "^4.0.2"
+		"koa-static": "^4.0.2",
+		"pg": "^7.4.1",
+		"pg-hstore": "^2.3.2",
+		"sequelize": "^4.29.0"
 	},
 	"devDependencies": {
 		"nodemon": "^1.14.8"
