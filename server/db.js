@@ -18,7 +18,6 @@ const Cats = db.define('cats', {
 
 /* Uncomment it if u want 2 reject all data in db to default (5 cats) */
 
-/*
 db.sync({ force: true }).then(() => {
 	Cats.create({
 		title: 'Тёмка!!!',
@@ -50,7 +49,6 @@ db.sync({ force: true }).then(() => {
 		image: 'British.jpg',
 	});
 });
-*/
 
 module.exports = {
 	db,
