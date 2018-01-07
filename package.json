@@ -9,6 +9,9 @@
 		"start": "concurrently \"cd server && yarn start\" \"cd client && yarn start\""
 	},
 	"dependencies": {
-		"concurrently": "^3.5.1"
+		"concurrently": "^3.5.1",
+		"pg": "^7.4.1",
+		"pg-hstore": "^2.3.2",
+		"sequelize": "^4.29.0"
 	}
 }
