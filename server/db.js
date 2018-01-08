@@ -50,8 +50,8 @@ db.sync({ force: true }).then(() => {
 	});
 });
 */
-!!!
-module.exports = {
+
+modul.exports = {
 	db,
 	Cats,
 };
