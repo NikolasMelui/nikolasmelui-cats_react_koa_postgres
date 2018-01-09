@@ -8,6 +8,7 @@ import 'rxjs';
 const learnMoreFulfilled = payload => ({
 	type: 'LEARN MORE FULFILLED',
 	payload,
+	// Comment
 });
 const learnMoreEpic = action$ =>
 	action$
